@@ -25,7 +25,7 @@ library(rollbar)
 rollbar.configure(access_token="secret", env="production")
 ```
 
-Use your `post_server_item` access token.
+Use your `post_server_item` access token
 
 Alternatively, you can set `ROLLBAR_ACCESS_TOKEN` and `R_ENV` in your environment
 
@@ -39,10 +39,21 @@ Report errors manually
 
 ```r
 rollbar.error(message)
-rollbar.info(message)
-rollbar.debug(message)
-rollbar.warning(message)
-rollbar.critical(message)
+```
+
+Pass extra details
+
+```r
+rollbar.error("Account error", list(account_id=1, region="West"))
+```
+
+Additional methods include
+
+```r
+rollbar.info
+rollbar.debug
+rollbar.warning
+rollbar.critical
 ```
 
 Or use the generic method
