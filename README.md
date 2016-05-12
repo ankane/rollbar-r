@@ -25,6 +25,8 @@ library(rollbar)
 rollbar.configure(access_token="secret", env="production")
 ```
 
+Use your `post_server_item` access token.
+
 Alternatively, you can set `ROLLBAR_ACCESS_TOKEN` and `R_ENV` in your environment
 
 Report uncaught errors automatically
@@ -48,3 +50,12 @@ Or use the generic method
 ```r
 rollbar.log(level, message)
 ```
+
+## Contributing
+
+Everyone is encouraged to help improve this project. Here are a few ways you can help:
+
+- [Report bugs](https://github.com/ankane/rollbar/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/rollbar/pulls)
+- Write, clarify, or fix documentation
+- Suggest or add new features
