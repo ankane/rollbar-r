@@ -1,6 +1,6 @@
 # Rollbar
 
-Exception tracking for R
+Error tracking for R
 
 [Official website](https://rollbar.com/)
 
