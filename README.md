@@ -11,13 +11,21 @@ install.packages("devtools")
 devtools::install_github("ankane/rollbar")
 ```
 
+or if you use [Jetpack](https://github.com/ankane/jetpack), add to your `packages.R`
+
+```r
+package("rollbar", github="ankane/rollbar")
+```
+
 ## Usage
 
 ```r
 library(rollbar)
 
-rollbar.configure(access_token = "secret", env = "production")
+rollbar.configure(access_token="secret", env="production")
 ```
+
+Alternatively, you can set `ROLLBAR_ACCESS_TOKEN` and `R_ENV` in your environment
 
 Report uncaught errors automatically
 
