@@ -41,12 +41,6 @@ Report errors manually
 rollbar.error(message)
 ```
 
-Pass extra details
-
-```r
-rollbar.error("Account error", list(account_id=1, region="West"))
-```
-
 Additional methods include
 
 ```r
@@ -60,6 +54,12 @@ Or use the generic method
 
 ```r
 rollbar.log(level, message)
+```
+
+Pass extra details
+
+```r
+rollbar.info("Job successful", list(job_id=123, awesome="yes"))
 ```
 
 ## Contributing
