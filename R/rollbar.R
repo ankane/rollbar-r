@@ -20,6 +20,9 @@ rollbar.attach <- function() {
 
 #' Configure the library
 #'
+#' @param access_token Access token from your Rollbar project
+#' @param env Environment name. Any string up to 255 chars is OK. For best results, use "production" for your production environment.
+#' @param root Absolute path to the root of your application, not including the final /
 #' @export
 rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
   if (!missing(access_token)) {
@@ -35,6 +38,8 @@ rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
 
 #' Report critical errors
 #'
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.critical <- function(message, extra = NULL) {
   rollbar::rollbar.log("critical", message, extra)
@@ -42,6 +47,8 @@ rollbar.critical <- function(message, extra = NULL) {
 
 #' Report debug messages
 #'
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.debug <- function(message, extra = NULL) {
   rollbar::rollbar.log("debug", message, extra)
@@ -49,6 +56,8 @@ rollbar.debug <- function(message, extra = NULL) {
 
 #' Report errors
 #'
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.error <- function(message, extra = NULL) {
   rollbar::rollbar.log("error", message, extra)
@@ -56,6 +65,8 @@ rollbar.error <- function(message, extra = NULL) {
 
 #' Report info messages
 #'
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.info <- function(message, extra = NULL) {
   rollbar::rollbar.log("info", message, extra)
@@ -63,6 +74,8 @@ rollbar.info <- function(message, extra = NULL) {
 
 #' Report warnings
 #'
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.warning <- function(message, extra = NULL) {
   rollbar::rollbar.log("warning", message, extra)
@@ -70,6 +83,9 @@ rollbar.warning <- function(message, extra = NULL) {
 
 #' Report messages
 #'
+#' @param level The "error" level
+#' @param message The message or error
+#' @param extra Extra data
 #' @export
 rollbar.log <- function(level, message, extra = NULL) {
   if (!exists("access_token") || nchar(access_token) < 1) {

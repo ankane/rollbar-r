@@ -6,6 +6,13 @@
 \usage{
 rollbar.log(level, message, extra = NULL)
 }
+\arguments{
+\item{level}{The "error" level}
+
+\item{message}{The message or error}
+
+\item{extra}{Extra data}
+}
 \description{
 Report messages
 }

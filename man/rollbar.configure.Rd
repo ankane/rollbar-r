@@ -6,6 +6,13 @@
 \usage{
 rollbar.configure(access_token = NULL, env = NULL, root = NULL)
 }
+\arguments{
+\item{access_token}{Access token from your Rollbar project}
+
+\item{env}{Environment name. Any string up to 255 chars is OK. For best results, use "production" for your production environment.}
+
+\item{root}{Absolute path to the root of your application, not including the final /}
+}
 \description{
 Configure the library
 }

@@ -6,6 +6,11 @@
 \usage{
 rollbar.warning(message, extra = NULL)
 }
+\arguments{
+\item{message}{The message or error}
+
+\item{extra}{Extra data}
+}
 \description{
 Report warnings
 }
