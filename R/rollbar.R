@@ -66,7 +66,7 @@ rollbar.log <- function(level, message, extra = NULL) {
     }
   }
   if (!exists("root")) {
-    root <- ""
+    root <- getwd()
   }
 
   if (nchar(access_token) > 0) {
