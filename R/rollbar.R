@@ -68,6 +68,9 @@ rollbar.error <- function(message, extra = NULL) {
 #' @param message The message or error
 #' @param extra Extra data
 #' @export
+#' @examples
+#' rollbar.info("Job successful")
+#' rollbar.info("Job successful", list(job_id=123, awesome="yes"))
 rollbar.info <- function(message, extra = NULL) {
   rollbar::rollbar.log("info", message, extra)
 }
@@ -87,6 +90,9 @@ rollbar.warning <- function(message, extra = NULL) {
 #' @param message The message or error
 #' @param extra Extra data
 #' @export
+#' @examples
+#' rollbar.log("info", "Job successful")
+#' rollbar.log("info", "Job successful", list(job_id=123, awesome="yes"))
 rollbar.log <- function(level, message, extra = NULL) {
   if (!exists("access_token") || nchar(access_token) < 1) {
     access_token <- Sys.getenv("ROLLBAR_ACCESS_TOKEN")

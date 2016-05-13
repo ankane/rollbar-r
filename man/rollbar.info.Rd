@@ -14,4 +14,8 @@ rollbar.info(message, extra = NULL)
 \description{
 Report info messages
 }
+\examples{
+rollbar.info("Job successful")
+rollbar.info("Job successful", list(job_id=123, awesome="yes"))
+}
 
