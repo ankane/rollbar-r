@@ -1,3 +1,5 @@
+#' Attach the global error handler
+#'
 #' @export
 rollbar.attach <- function() {
   if (!interactive()) {
@@ -16,6 +18,8 @@ rollbar.attach <- function() {
   }
 }
 
+#' Configure the library
+#'
 #' @export
 rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
   if (!missing(access_token)) {
@@ -29,31 +33,43 @@ rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
   }
 }
 
+#' Report critical errors
+#'
 #' @export
 rollbar.critical <- function(message, extra = NULL) {
   rollbar::rollbar.log("critical", message, extra)
 }
 
+#' Report debug messages
+#'
 #' @export
 rollbar.debug <- function(message, extra = NULL) {
   rollbar::rollbar.log("debug", message, extra)
 }
 
+#' Report errors
+#'
 #' @export
 rollbar.error <- function(message, extra = NULL) {
   rollbar::rollbar.log("error", message, extra)
 }
 
+#' Report info messages
+#'
 #' @export
 rollbar.info <- function(message, extra = NULL) {
   rollbar::rollbar.log("info", message, extra)
 }
 
+#' Report warnings
+#'
 #' @export
 rollbar.warning <- function(message, extra = NULL) {
   rollbar::rollbar.log("warning", message, extra)
 }
 
+#' Report messages
+#'
 #' @export
 rollbar.log <- function(level, message, extra = NULL) {
   if (!exists("access_token") || nchar(access_token) < 1) {
