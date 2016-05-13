@@ -30,32 +30,32 @@ rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
 }
 
 #' @export
-rollbar.critical <- function(message, extra = list()) {
+rollbar.critical <- function(message, extra = NULL) {
   rollbar::rollbar.log("critical", message, extra)
 }
 
 #' @export
-rollbar.debug <- function(message, extra = list()) {
+rollbar.debug <- function(message, extra = NULL) {
   rollbar::rollbar.log("debug", message, extra)
 }
 
 #' @export
-rollbar.error <- function(message, extra = list()) {
+rollbar.error <- function(message, extra = NULL) {
   rollbar::rollbar.log("error", message, extra)
 }
 
 #' @export
-rollbar.info <- function(message, extra = list()) {
+rollbar.info <- function(message, extra = NULL) {
   rollbar::rollbar.log("info", message, extra)
 }
 
 #' @export
-rollbar.warning <- function(message, extra = list()) {
+rollbar.warning <- function(message, extra = NULL) {
   rollbar::rollbar.log("warning", message, extra)
 }
 
 #' @export
-rollbar.log <- function(level, message, extra = list()) {
+rollbar.log <- function(level, message, extra = NULL) {
   if (!exists("access_token") || nchar(access_token) < 1) {
     access_token <- Sys.getenv("ROLLBAR_ACCESS_TOKEN")
   }
@@ -78,15 +78,17 @@ rollbar.log <- function(level, message, extra = list()) {
       filename <- sub(paste0(root, "/"), "", filename)
     }
 
+    msg <- list(body = message)
+    if (!is.null(extra)) {
+      msg$extra <- extra
+    }
+
     payload <- list(
       access_token = access_token,
       data = list(
         environment = env,
         body = list(
-          message = list(
-            body = message,
-            extra = extra
-          )
+          message = msg
         ),
         level = level,
         language = "R",
