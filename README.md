@@ -2,7 +2,7 @@
 
 Error tracking for R
 
-[Official website](https://rollbar.com/)
+[Rollbar website](https://rollbar.com/)
 
 ## Installation
 
