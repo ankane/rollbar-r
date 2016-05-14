@@ -7,14 +7,13 @@ Error tracking for R
 ## Installation
 
 ```r
-install.packages("devtools")
-devtools::install_github("ankane/rollbar")
+install.packages("rollbar")
 ```
 
 or if you use [Jetpack](https://github.com/ankane/jetpack), add to your `packages.R`
 
 ```r
-package("rollbar", github="ankane/rollbar")
+package("rollbar")
 ```
 
 ## Usage
