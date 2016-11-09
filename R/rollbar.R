@@ -13,7 +13,7 @@ rollbar.attach <- function() {
       }
 
       write("Execution halted", stderr())
-      q("no", status = 1, runLast = FALSE)
+      q("no", status = 1, runLast = TRUE)
     })
   }
 }
