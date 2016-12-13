@@ -5,7 +5,7 @@ rollbar.attach <- function() {
   if (!interactive()) {
     prev <- getOption("error")
     options(error = function() {
-      message <- geterrmessage()
+      message <- paste0(getwd(), ": ", geterrmessage())
       rollbar::rollbar.error(message)
 
       if (is.language(prev)) {
