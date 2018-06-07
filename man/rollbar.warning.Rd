@@ -14,4 +14,3 @@ rollbar.warning(message, extra = NULL)
 \description{
 Report warnings
 }
-

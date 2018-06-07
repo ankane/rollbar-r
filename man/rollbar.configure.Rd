@@ -16,4 +16,3 @@ rollbar.configure(access_token = NULL, env = NULL, root = NULL)
 \description{
 Configure the library
 }
-

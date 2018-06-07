@@ -9,4 +9,3 @@ rollbar.attach()
 \description{
 Attach the global error handler
 }
-

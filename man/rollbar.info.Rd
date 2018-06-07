@@ -18,4 +18,3 @@ Report info messages
 rollbar.info("Job successful")
 rollbar.info("Job successful", list(job_id=123, awesome="yes"))
 }
-

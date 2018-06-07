@@ -20,4 +20,3 @@ Report messages
 rollbar.log("info", "Job successful")
 rollbar.log("info", "Job successful", list(job_id=123, awesome="yes"))
 }
-

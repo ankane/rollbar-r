@@ -14,4 +14,3 @@ rollbar.debug(message, extra = NULL)
 \description{
 Report debug messages
 }
-

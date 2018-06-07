@@ -14,4 +14,3 @@ rollbar.error(message, extra = NULL)
 \description{
 Report errors
 }
-

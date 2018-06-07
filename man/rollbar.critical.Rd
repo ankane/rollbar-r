@@ -14,4 +14,3 @@ rollbar.critical(message, extra = NULL)
 \description{
 Report critical errors
 }
-
