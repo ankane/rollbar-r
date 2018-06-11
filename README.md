@@ -12,10 +12,10 @@ Error tracking for R
 install.packages("rollbar")
 ```
 
-or if you use [Jetpack](https://github.com/ankane/jetpack), add to your `packages.R`
+or if you use [Jetpack](https://github.com/ankane/jetpack), run:
 
-```r
-package("rollbar")
+```sh
+jetpack add rollbar
 ```
 
 ## Usage
