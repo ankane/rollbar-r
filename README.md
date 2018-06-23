@@ -14,8 +14,8 @@ install.packages("rollbar")
 
 or if you use [Jetpack](https://github.com/ankane/jetpack), run:
 
-```sh
-jetpack add rollbar
+```r
+jetpack::add("rollbar")
 ```
 
 ## Usage
