@@ -11,4 +11,4 @@ License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
     httr
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
