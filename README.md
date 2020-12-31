@@ -4,7 +4,7 @@ Error tracking for R
 
 [Rollbar website](https://rollbar.com/)
 
-[![Build Status](https://travis-ci.org/ankane/rollbar.svg?branch=master)](https://travis-ci.org/ankane/rollbar)
+[![Build Status](https://github.com/ankane/rollbar/workflows/build/badge.svg?branch=master)](https://github.com/ankane/rollbar/actions)
 
 ## Installation
 
