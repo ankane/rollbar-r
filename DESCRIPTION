@@ -8,7 +8,6 @@ Description: Reports errors and messages to Rollbar, the error tracking platform
 URL: https://github.com/ankane/rollbar
 BugReports: https://github.com/ankane/rollbar/issues
 License: MIT + file LICENSE
-LazyData: TRUE
 Imports:
     httr
 RoxygenNote: 7.1.0
