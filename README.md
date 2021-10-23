@@ -1,10 +1,10 @@
-# Rollbar
+# Rollbar R
 
 Error tracking for R
 
 [Rollbar website](https://rollbar.com/)
 
-[![Build Status](https://github.com/ankane/rollbar/workflows/build/badge.svg?branch=master)](https://github.com/ankane/rollbar/actions)
+[![Build Status](https://github.com/ankane/rollbar-r/workflows/build/badge.svg?branch=master)](https://github.com/ankane/rollbar-r/actions)
 
 ## Installation
 
@@ -67,16 +67,16 @@ rollbar.info("Job successful", list(job_id=123, awesome="yes"))
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/rollbar/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/rollbar/pulls)
+- [Report bugs](https://github.com/ankane/rollbar-r/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/rollbar-r/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ankane/rollbar.git
-cd rollbar
+git clone https://github.com/ankane/rollbar-r.git
+cd rollbar-r
 ```
 
 In R, do:
