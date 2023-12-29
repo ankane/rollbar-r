@@ -8,6 +8,7 @@ Description: Reports errors and messages to Rollbar, the error tracking platform
 URL: https://github.com/ankane/rollbar-r
 BugReports: https://github.com/ankane/rollbar-r/issues
 License: MIT + file LICENSE
+RoxygenNote: 7.2.3
+Encoding: UTF-8
 Imports:
     httr
-RoxygenNote: 7.1.0
