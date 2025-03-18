@@ -23,8 +23,9 @@ rollbar.attach <- function() {
 #' @param access_token Access token from your Rollbar project
 #' @param env Environment name. Any string up to 255 chars is OK. For best results, use "production" for your production environment.
 #' @param root Absolute path to the root of your application, not including the final /
+#' @param scope A list with the current context data.  This will be merged into the extra of any call to rollbar
 #' @export
-rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
+rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL, scope = NULL) {
   if (!missing(access_token)) {
     access_token <<- access_token
   }
@@ -33,6 +34,9 @@ rollbar.configure <- function(access_token = NULL, env = NULL, root = NULL) {
   }
   if (!missing(root)) {
     root <<- root
+  }
+  if (!missing(scope)) {
+    scope <<- scope
   }
 }
 
@@ -117,6 +121,9 @@ rollbar.log <- function(level, message, extra = NULL) {
     }
 
     msg <- list(body = message)
+    if (exists("scope")) {
+      extra <- c(extra, scope)
+    }
     if (!is.null(extra)) {
       msg$extra <- extra
     }
